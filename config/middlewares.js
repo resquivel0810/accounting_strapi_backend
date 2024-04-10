@@ -1,0 +1,45 @@
+module.exports = [
+  'strapi::errors',
+  {
+    name: "strapi::security",
+    config: {
+      contentSecurityPolicy: {
+        useDefaults: true,  
+        directives: {
+          "script-src": ["'self'", "*.tinymce.com", "*.tiny.cloud","accounting.linarys.com","sandbox.linarys.com","lh3.googleusercontent.com/a/", "https:"],
+          "connect-src": ["'self'", "*.tinymce.com", "*.tiny.cloud","accounting.linarys.com", "thawing-cliffs-23888-c80efe02f60e.herokuapp.com", "sandbox.linarys.com","lh3.googleusercontent.com/a/", "blob:", "*.strapi.io"],
+          "img-src": [
+            "'self'",
+            "*.tinymce.com",
+            "*.tiny.cloud",
+            "data:",
+            "blob:",
+            "dl.airtable.com",
+            "strapi.io",
+            "s3.amazonaws.com",
+            "cdn.jsdelivr.net",
+            "accounting.linarys.com",
+            "sandbox.linarys.com",
+            ,"lh3.googleusercontent.com/a/",
+          ],
+          "style-src": [
+            "'self'",
+            "'unsafe-inline'",
+            "*.tinymce.com",
+            "*.tiny.cloud",
+          ],
+          "font-src": ["'self'", "*.tinymce.com", "*.tiny.cloud"],
+        },
+        upgradeInsecureRequests: null,
+      },
+    },
+  },
+  'strapi::cors',
+  'strapi::poweredBy',
+  'strapi::logger',
+  'strapi::query',
+  'strapi::body',
+  'strapi::session',
+  'strapi::favicon',
+  'strapi::public',
+];

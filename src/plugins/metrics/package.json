@@ -1,0 +1,29 @@
+{
+  "name": "Metrics",
+  "version": "0.0.0",
+  "description": "This is the description of the plugin.",
+  "strapi": {
+    "name": "Metrics",
+    "description": "Description of Metrics plugin",
+    "kind": "plugin",
+    "displayName": "Metrics"
+  },
+  "dependencies": {
+    "d3": "^7.8.5",
+    "d3-react": "^1.0.4",
+    "react-faux-dom": "^4.5.0"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "maintainers": [
+    {
+      "name": "A Strapi developer"
+    }
+  ],
+  "engines": {
+    "node": ">=14.19.1 <=18.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}
