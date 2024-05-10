@@ -7,17 +7,14 @@ WORKDIR /app
 # Copy both package.json and package-lock.json to install dependencies
 COPY package*.json ./
 
-# Install only production dependencies using npm ci
-RUN npm ci --only=production
+# Install all dependencies (not just production)
+RUN npm install
 
 # Copy the entire application code to the working directory
 COPY . .
 
-# Build the application in production mode
-RUN npm run build
-
 # Expose port 1337 for the Strapi application
 EXPOSE 1337
 
-# Start the application in production mode
-CMD ["npm", "run", "start"]
+# Start the application in development mode
+CMD ["npm", "run", "develop"]
