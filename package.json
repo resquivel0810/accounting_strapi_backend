@@ -9,7 +9,6 @@
     "build": "strapi build",
     "strapi": "strapi"
   },
-  "devDependencies": {},
   "dependencies": {
     "@sklinet/strapi-plugin-tinymce": "^1.0.6",
     "@strapi/plugin-cloud": "4.16.2",
@@ -22,8 +21,9 @@
     "pg-connection-string": "^2.6.4",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
+    "react-faux-dom": "^4.5.0",
     "react-router-dom": "5.3.4",
-    "strapi-plugin-cookie-manager": "^1.2.2",
+    "strapi-plugin-cookie-manager": "^1.0.10",
     "styled-components": "5.3.3"
   },
   "author": {
@@ -33,8 +33,8 @@
     "uuid": "40758115-209b-4f25-93a3-b05b5467c08e"
   },
   "engines": {
-    "node": "16.0.0",
-    "npm": "=6.0.0"
+    "node": ">=14.19.1 <=18.x.x",
+    "npm": ">=6.0.0"
   },
   "license": "MIT"
 }
